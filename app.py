@@ -1,9 +1,8 @@
 from flask import Flask, render_template, url_for, redirect
 
-app = Flask(__name__)
-
-
 # instantiating a flask object
+
+app = Flask(__name__)
 
 
 # make the function http callable using a decorator
@@ -49,19 +48,12 @@ def maggie():
     return render_template('maggie.html', title='Maggie')
 
 
+# dictionary joins url paths to relevant name
 @app.route('/<path:invalid_page>')
 def page_not_found(invalid_page):
-    pages = {
-        'Home': '/',
-        'About': '/about/',
-        'Lisa Simpson': '/lisa/',
-        'Bart Simpson': '/bart/',
-        'Homer Simpson': '/homer/',
-        'Marge Simpson': '/marge/',
-        'Maggie Simpson': '/maggie/'
-    }
-    return render_template('invalid_page.html', title='Invalid Page', invalid_page=invalid_page, pages=pages)
+    return render_template('invalid_page.html', title='Invalid Page', invalid_page=invalid_page)
 
 
+# allows code to be tested in web browser
 if __name__ == "__main__":
     app.run(debug=True)
