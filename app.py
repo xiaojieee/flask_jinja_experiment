@@ -34,5 +34,14 @@ def homer():
     return render_template('homer.html', title='Homer')
 
 
+@app.route('/marge/')
+def marge():
+    return render_template('marge.html', title='Marge')
+
+
+@app.route('/maggie/')
+def maggie():
+    return render_template('maggie.html', title='Maggie')
+
 if __name__ == "__main__":
     app.run(debug=True)

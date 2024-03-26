@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-    <meta charset="UTF-8">
+{% extends "base.html" %}
 
+{% block content %}
   <title>About Bart</title>
         <body>
             <h1>Bartholomew Jojo "Bart" Simpson</h1>
             <p>At ten years old, Bart is the eldest child and only son of
-            <a href="{homer_url}">Homer</a>
-            and <a href="{marge_url}">Marge</a>,
+            <a href="{{url_for('homer')}}">Homer</a>
+            and <a href="{{url_for('marge')}}">Marge</a>,
             and the brother of
             <a href="{{url_for('lisa')}}">Lisa</a> and
-            <a href="{maggie_url}">Maggie</a>.
+            <a href="{{url_for('maggie')}}">Maggie</a>.
             Bart's most prominent and popular character traits are his mischievousness, rebelliousness and
             disrespect for authority. </p>
-            <hr>
-           <a href="{{url_for('home')}}">Home Page</a>
-            <a href="{{url_for('about')}}">About the Archive</a>
         </body>
-    </html>
+{% endblock %}

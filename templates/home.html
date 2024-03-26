@@ -2,15 +2,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<h1>Welcome to the Springfield Archive</h1>
 <body>
   <p>Check out our list of residents in Springfield</p>
                 <ul>
                     <li><a href="{{url_for('lisa')}}">Lisa Simpson</a></li>
                     <li><a href="{{url_for('bart')}}">Bart Simpson</a></li>
-                    <li><a href="{homer_url}">Homer Simpson</a></li>
-                    <li><a href="{marge_url}">Marge Simpson</a></li>
-                    <li><a href="{maggie_url}">Maggie Simpson</a></li>
+                    <li><a href="{{url_for('homer')}}">Homer Simpson</a></li>
+                    <li><a href="{{url_for('marge')}}">Marge Simpson</a></li>
+                    <li><a href="{{url_for('maggie')}}">Maggie Simpson</a></li>
                 </ul>
 
 </body>

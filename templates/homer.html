@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+            <h1>Homer Jay Simpson</h1>
+            <p>Homer is the nominal foreman of the paternally eponymous family. He and his wife
+            <a href="{{url_for('marge')}}">Marge</a> have
+            three children: <a href="{{url_for('bart')}}">Bart</a>,
+            <a href="{{url_for('lisa')}}">Lisa</a> and <a href="{{url_for('maggie')}}">Maggie</a>.</p>
+        </body>
+{% endblock %}
