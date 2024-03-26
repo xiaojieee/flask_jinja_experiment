@@ -2,7 +2,6 @@
 
 {% block content %}
 
-<body>
 <h1>Oops! You seem to be lost!</h1>
 <img src="/static/homer_doh.jpg">
     <p>The page "{{invalid_page}}" does not exist.</p>
@@ -15,6 +14,6 @@
         <li><a href="{{url_for('marge')}}">Marge Simpson</a></li>
         <li><a href="{{url_for('maggie')}}">Maggie Simpson</a></li>
     </ul>
-</body>
+
 
 {% endblock %}

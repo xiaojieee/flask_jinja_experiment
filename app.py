@@ -15,7 +15,7 @@ def home():
 
 @app.route('/welcome/<name>')
 def welcome(name):
-    return render_template('home.html', name=name)
+    return render_template('home.html', name=name.capitalize())
 
 
 @app.route('/about/')
@@ -48,7 +48,6 @@ def maggie():
     return render_template('maggie.html', title='Maggie')
 
 
-# dictionary joins url paths to relevant name
 @app.route('/<path:invalid_page>')
 def page_not_found(invalid_page):
     return render_template('invalid_page.html', title='Invalid Page', invalid_page=invalid_page)
