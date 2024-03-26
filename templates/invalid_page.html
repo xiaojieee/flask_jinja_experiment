@@ -1,3 +1,7 @@
+
+{% extends "base.html" %}
+
+{% block content %}
 {% for key, value in pages.items() %}
 
 {% endfor %}
@@ -14,3 +18,5 @@
         <li><a href="{{url_for('maggie')}}">Maggie Simpson</a></li>
     </ul>
 </body>
+
+{% endblock %}
