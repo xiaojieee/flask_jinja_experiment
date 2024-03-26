@@ -14,8 +14,27 @@ li {
 
 body {
         text-align: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
     }
-    ul {
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+ul {
         list-style-type: none;
         padding: 0;
     }
@@ -27,5 +46,26 @@ margin-right: auto;
 border-radius: 8px;
   max-width: 50%;
   height: auto;
+}
+
+carouselHero .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  height:100vh;
+}
+
+carouselHero .carousel-item:before {
+  content: "";
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent, rgba(0,0,0,0.5)
+    );
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
