@@ -48,5 +48,20 @@ def marge():
 def maggie():
     return render_template('maggie.html', title='Maggie')
 
+
+@app.route('/<path:invalid_page>')
+def page_not_found(invalid_page):
+    pages = {
+        'Home': '/',
+        'About': '/about/',
+        'Lisa Simpson': '/lisa/',
+        'Bart Simpson': '/bart/',
+        'Homer Simpson': '/homer/',
+        'Marge Simpson': '/marge/',
+        'Maggie Simpson': '/maggie/'
+    }
+    return render_template('invalid_page.html', title='Invalid Page', invalid_page=invalid_page, pages=pages)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,16 @@
+{% for key, value in pages.items() %}
+
+{% endfor %}
+<body>
+<h1>Oops! You seem to be lost!</h1>
+    <p>The page "{{invalid_page}}" does not exist.</p>
+    <h2>Did you mean:</h2>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home Page</a></li>
+        <li><a href="{{url_for('lisa')}}">Lisa Simpson</a></li>
+        <li><a href="{{url_for('bart')}}">Bart Simpson</a></li>
+        <li><a href="{{url_for('homer')}}">Homer Simpson</a></li>
+        <li><a href="{{url_for('marge')}}">Marge Simpson</a></li>
+        <li><a href="{{url_for('maggie')}}">Maggie Simpson</a></li>
+    </ul>
+</body>
