@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome to the Springfield Archive</h1>
+
+{% block content %}
+    {# Template inserted here #}
+{% endblock %}
+
+      <hr>
+            <a href="{{url_for('home')}}">Home Page</a>
+            <a href="{{url_for('about')}}">About the Archive</a>
+</body>
+</html>

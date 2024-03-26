@@ -1,0 +1,17 @@
+{# this will inherit the content of the base.html template #}
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+  <p>Check out our list of residents in Springfield</p>
+                <ul>
+                    <li><a href="{{url_for('lisa')}}">Lisa Simpson</a></li>
+                    <li><a href="{{url_for('bart')}}">Bart Simpson</a></li>
+                    <li><a href="{homer_url}">Homer Simpson</a></li>
+                    <li><a href="{marge_url}">Marge Simpson</a></li>
+                    <li><a href="{maggie_url}">Maggie Simpson</a></li>
+                </ul>
+
+</body>
+{% endblock %}

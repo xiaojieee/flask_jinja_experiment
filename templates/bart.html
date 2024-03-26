@@ -10,12 +10,12 @@
             <a href="{homer_url}">Homer</a>
             and <a href="{marge_url}">Marge</a>,
             and the brother of
-            <a href="{lisa_url}">Lisa</a> and
+            <a href="{{url_for('lisa')}}">Lisa</a> and
             <a href="{maggie_url}">Maggie</a>.
             Bart's most prominent and popular character traits are his mischievousness, rebelliousness and
             disrespect for authority. </p>
             <hr>
-            <a href="{home_url}">Home Page</a>
-            <a href="{about_url}">About the Archive</a>
+           <a href="{{url_for('home')}}">Home Page</a>
+            <a href="{{url_for('about')}}">About the Archive</a>
         </body>
     </html>
